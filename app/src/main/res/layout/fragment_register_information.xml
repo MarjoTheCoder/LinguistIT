@@ -6,9 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
-    tools:context=".ui.register.RegisterInformationFragment">
+    tools:context=".RegisterInformationFragment">
 
-    <!-- ═══ FONDO DEL HEADER ═══ -->
     <View
         android:id="@+id/vHeaderBg"
         android:layout_width="0dp"
@@ -19,7 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- ═══ BOTÓN ATRÁS ═══ -->
     <ImageButton
         android:id="@+id/btnBack"
         android:layout_width="24dp"
@@ -33,7 +31,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- ═══ AVATAR ═══ -->
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivAvatar"
         android:layout_width="72dp"
@@ -49,7 +46,6 @@
         app:layout_constraintTop_toBottomOf="@id/btnBack"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- ═══ TÍTULO ═══ -->
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="0dp"
@@ -65,7 +61,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- ═══ SUBTÍTULO ═══ -->
     <TextView
         android:id="@+id/tvSubtitulo"
         android:layout_width="0dp"
@@ -81,7 +76,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- ═══ BARRIER ═══ -->
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrierHeader"
         android:layout_width="wrap_content"
@@ -89,7 +83,6 @@
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="tvSubtitulo" />
 
-    <!-- ═══ SCROLL: ocupa el espacio restante bajo el header ═══ -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollForm"
         android:layout_width="0dp"
@@ -104,7 +97,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- INDICADOR DE PASO -->
             <TextView
                 android:id="@+id/tvPaso"
                 android:layout_width="wrap_content"
@@ -117,7 +109,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
-            <!-- NOMBRE (izquierda de la fila) -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilNombre"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -139,7 +130,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- APELLIDO (derecha de la fila) -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilApellido"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -161,7 +151,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- CORREO -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilCorreo"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -184,7 +173,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- TELÉFONO -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilTelefono"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -207,7 +195,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- FECHA DE NACIMIENTO -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilFechaNacimiento"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -235,7 +222,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- PAÍS / CIUDAD -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilPaisCiudad"
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -258,7 +244,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- BOTÓN GUARDAR Y CONTINUAR -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnGuardar"
                 style="@style/Widget.Material3.Button"
