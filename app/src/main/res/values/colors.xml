@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+
+    <!-- =============================================
+         PALETA PRINCIPAL DE LA APP
+         Coloca este archivo en: app/src/main/res/values/colors.xml
+         ============================================= -->
+
+    <!-- Azules oscuros (fondos) -->
+    <color name="navy_deep">#010D23</color>
+    <color name="navy_dark">#03223F</color>
+
+    <!-- Azul principal (acción / primario) -->
+    <color name="blue_primary">#038BBB</color>
+
+    <!-- Ámbar / acento cálido -->
+    <color name="amber_light">#FCCB6F</color>
+    <color name="amber_dark">#E19F41</color>
+
+    <!-- Blancos y grises utilitarios -->
     <color name="white">#FFFFFFFF</color>
+    <color name="white_70">#B3FFFFFF</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="surface_card">#0A2540</color>
+    <color name="divider">#1A4A70</color>
+
+    <!-- Tema Material3: mapear la paleta al sistema de colores -->
+    <color name="md_theme_primary">#038BBB</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#03223F</color>
+    <color name="md_theme_onPrimaryContainer">#FCCB6F</color>
+    <color name="md_theme_secondary">#FCCB6F</color>
+    <color name="md_theme_onSecondary">#010D23</color>
+    <color name="md_theme_secondaryContainer">#E19F41</color>
+    <color name="md_theme_onSecondaryContainer">#010D23</color>
+    <color name="md_theme_background">#010D23</color>
+    <color name="md_theme_onBackground">#FFFFFF</color>
+    <color name="md_theme_surface">#03223F</color>
+    <color name="md_theme_onSurface">#FFFFFF</color>
+    <color name="md_theme_surfaceVariant">#0A2540</color>
+    <color name="md_theme_onSurfaceVariant">#B3FFFFFF</color>
+    <color name="md_theme_outline">#038BBB</color>
+    <color name="md_theme_error">#CF6679</color>
+    <color name="md_theme_onError">#FFFFFF</color>
+
 </resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "169871980649",
+    "project_id": "linguistit-706a8",
+    "storage_bucket": "linguistit-706a8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169871980649:android:9081134fb9c5e8bbf74af8",
+        "android_client_info": {
+          "package_name": "com.example.linguistit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt3kXvJMb9YIF4v6KOGmD21Ktek6d-_0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

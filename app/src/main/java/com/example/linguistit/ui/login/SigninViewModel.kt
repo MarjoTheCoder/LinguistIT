@@ -1,4 +1,4 @@
-package com.example.linguistit
+package com.example.linguistit.ui.login
 
 import androidx.lifecycle.ViewModel
 
