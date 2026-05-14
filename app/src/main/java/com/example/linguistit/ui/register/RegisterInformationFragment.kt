@@ -1,60 +1,85 @@
 package com.example.linguistit.ui.register
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.linguistit.R
+import com.example.linguistit.databinding.FragmentRegisterInformationBinding
+import com.example.linguistit.model.AuthResult
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [RegisterInformationFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class RegisterInformationFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentRegisterInformationBinding? = null
+    private val binding get() = _binding!!
+
+    private val viewModel: RegisterViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register_information, container, false)
+    ): View {
+        _binding = FragmentRegisterInformationBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RegisterInformationFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RegisterInformationFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setupEventListeners()
+        observeViewModel()
+    }
+
+    private fun setupEventListeners() {
+        binding.btnFinishRegister.setOnClickListener {
+            val nombre = binding.etName.text.toString()
+            val apellido = binding.etSurname.text.toString()
+            val edadString = binding.etAge.text.toString()
+
+            if (validateFields(nombre, apellido, edadString)) {
+                viewModel.completeRegistration(
+                    nombre,
+                    apellido,
+                    edadString.toInt()
+                )
+            }
+        }
+    }
+
+    private fun observeViewModel() {
+        viewModel.registerResult.observe(viewLifecycleOwner) { result ->
+            when (result) {
+                is AuthResult.Loading -> {
+                    binding.btnFinishRegister.isEnabled = false
+                }
+                is AuthResult.Success -> {
+                    binding.btnFinishRegister.isEnabled = true
+                    Toast.makeText(requireContext(), "Registro exitoso", Toast.LENGTH_SHORT).show()
+
+                    findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+                }
+                is AuthResult.Error -> {
+                    binding.btnFinishRegister.isEnabled = true
+                    Toast.makeText(requireContext(), result.message, Toast.LENGTH_LONG).show()
                 }
             }
+        }
+    }
+
+    private fun validateFields(nom: String, ape: String, edad: String): Boolean {
+        if (nom.isBlank() || ape.isBlank() || edad.isBlank()) {
+            Toast.makeText(requireContext(), "Por favor completa todos los campos", Toast.LENGTH_SHORT).show()
+            return false
+        }
+        return true
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

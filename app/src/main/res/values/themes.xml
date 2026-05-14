@@ -1,81 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <!-- =============================================
-         TEMA PRINCIPAL DE LA APP
-         Coloca este archivo en: app/src/main/res/values/themes.xml
-         ============================================= -->
-
-    <style name="Theme.App.Base" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Colores primarios -->
-        <item name="colorPrimary">@color/blue_primary</item>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema Base de la Aplicación -->
+    <style name="Theme.LinguistIT" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorPrimaryContainer">@color/navy_dark</item>
-        <item name="colorOnPrimaryContainer">@color/amber_light</item>
 
-        <!-- Colores secundarios (ámbar) -->
-        <item name="colorSecondary">@color/amber_light</item>
-        <item name="colorOnSecondary">@color/navy_deep</item>
-        <item name="colorSecondaryContainer">@color/amber_dark</item>
-        <item name="colorOnSecondaryContainer">@color/navy_deep</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent</item>
+        <item name="colorOnSecondary">@color/white</item>
 
-        <!-- Superficies y fondo -->
-        <item name="android:colorBackground">@color/navy_deep</item>
-        <item name="colorOnBackground">@color/white</item>
-        <item name="colorSurface">@color/navy_dark</item>
-        <item name="colorOnSurface">@color/white</item>
-        <item name="colorSurfaceVariant">@color/surface_card</item>
-        <item name="colorOnSurfaceVariant">@color/white_70</item>
+        <item name="android:windowBackground">@color/gray_bg</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorError">@color/error</item>
 
-        <!-- Bordes y outlines -->
-        <item name="colorOutline">@color/blue_primary</item>
-        <item name="colorOutlineVariant">@color/divider</item>
-
-        <!-- Error -->
-        <item name="colorError">@color/md_theme_error</item>
-        <item name="colorOnError">@color/white</item>
-
-        <!-- Barra de estado transparente -->
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@color/navy_deep</item>
-        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
     </style>
 
-    <!-- Tema principal -->
-    <style name="Theme.App" parent="Theme.App.Base" />
-
-    <!-- Estilo de TextInputLayout personalizado con colores de la app -->
-    <style name="Widget.App.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeColor">@color/selector_input_stroke</item>
-        <item name="hintTextColor">@color/selector_input_hint</item>
-        <item name="android:textColorHint">@color/white_70</item>
-        <item name="boxBackgroundColor">@color/surface_card</item>
-        <item name="boxCornerRadiusTopStart">12dp</item>
-        <item name="boxCornerRadiusTopEnd">12dp</item>
-        <item name="boxCornerRadiusBottomStart">12dp</item>
-        <item name="boxCornerRadiusBottomEnd">12dp</item>
-        <item name="endIconTint">@color/blue_primary</item>
-        <item name="startIconTint">@color/blue_primary</item>
+    <style name="Widget.LinguistIT.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.LinguistIT.Button</item>
     </style>
 
-    <!-- Estilo de botón primario con bordes redondeados -->
-    <style name="Widget.App.Button.Primary" parent="Widget.Material3.Button">
-        <item name="android:textColor">@color/navy_deep</item>
-        <item name="backgroundTint">@color/amber_light</item>
-        <item name="cornerRadius">28dp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:letterSpacing">0.05</item>
-    </style>
-
-    <!-- Estilo de botón de texto -->
-    <style name="Widget.App.Button.Text" parent="Widget.Material3.Button.TextButton">
-        <item name="android:textColor">@color/amber_light</item>
-    </style>
-
-    <!-- Avatar circular para ShapeableImageView -->
-    <style name="ShapeAppearance.App.CircleImageView" parent="">
+    <style name="ShapeAppearance.LinguistIT.Button" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50%</item>
+        <item name="cornerSize">8dp</item>
     </style>
-
 </resources>
