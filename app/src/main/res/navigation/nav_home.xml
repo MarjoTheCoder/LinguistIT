@@ -1,0 +1,20 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/projectsFragment">
+
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="com.example.linguistit.ui.home.ProjectsFragment"
+        android:label="Proyectos" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.linguistit.ui.home.ProfileFragment"
+        android:label="Perfil" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.linguistit.ui.home.SettingsFragment"
+        android:label="Ajustes" />
+</navigation>

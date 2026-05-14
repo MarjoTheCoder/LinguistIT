@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- =============================================
+     SELECTOR DE COLOR PARA HINT (LABEL) DEL INPUT
+     Coloca este archivo en: app/src/main/res/color/selector_input_hint.xml
+     ============================================= -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="#FCCB6F" android:state_focused="true" />
+    <item android:color="#B3FFFFFF" />
+</selector>
