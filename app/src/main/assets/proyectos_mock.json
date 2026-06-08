@@ -1,14 +1,42 @@
 [
   {
-    "id": 1,
-    "nombre": "Curso de Inglés Básico",
-    "progreso": 45,
-    "estado": "en_progreso"
+    "id": "PRJ-001",
+    "name": "Consultorio Fiscal FCA-UNAM",
+    "description": "Desarrollo e implementación de la plataforma web oficial para el Consultorio Fiscal de la Facultad de Contaduría y Administración.",
+    "progress": 100,
+    "status": "Completado",
+    "category": "Desarrollo Web",
+    "technologies": ["PHP", "MySQL", "CSS (BEM)"],
+    "updated_at": "2026-05-15"
   },
   {
-    "id": 2,
-    "nombre": "Vocabulario Técnico TI",
-    "progreso": 80,
-    "estado": "en_progreso"
+    "id": "PRJ-002",
+    "name": "LinguistIT Android App",
+    "description": "Aplicación móvil nativa orientada al aprendizaje y gestión de idiomas, integrada con Firebase Authentication y arquitectura MVVM.",
+    "progress": 45,
+    "status": "En Desarrollo",
+    "category": "Desarrollo Móvil",
+    "technologies": ["Kotlin", "Firebase", "Retrofit"],
+    "updated_at": "2026-06-08"
+  },
+  {
+    "id": "PRJ-003",
+    "name": "Propuesta Gigabit Ethernet - Campus",
+    "description": "Diseño de infraestructura de red inalámbrica y backbone topológico centralizando un Horizontal Cross (HC) por edificio para los bloques A, B, C, D y F.",
+    "progress": 85,
+    "status": "En Revisión",
+    "category": "Infraestructura de Red",
+    "technologies": ["EIA-TIA 568", "Cisco Packet Tracer"],
+    "updated_at": "2026-06-01"
+  },
+  {
+    "id": "PRJ-004",
+    "name": "Sistema de Control de Inventarios (EOQ)",
+    "description": "Módulo de analítica y optimización de almacenes basado en modelos matemáticos de inventario y teoría de colas para simulación de servidores.",
+    "progress": 15,
+    "status": "Planeado",
+    "category": "Modelado Matemático",
+    "technologies": ["Kotlin", "Python", "Queueing Theory"],
+    "updated_at": "2026-06-05"
   }
 ]
