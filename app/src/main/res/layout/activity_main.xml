@@ -14,4 +14,8 @@
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_onboarding" />
 
+    <include
+        android:id="@+id/globalLoader"
+        layout="@layout/fragment_loader" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "nombre": "Curso de Inglés Básico",
+    "progreso": 45,
+    "estado": "en_progreso"
+  },
+  {
+    "id": 2,
+    "nombre": "Vocabulario Técnico TI",
+    "progreso": 80,
+    "estado": "en_progreso"
+  }
+]

@@ -27,4 +27,8 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
     }
+
+    fun showLoading(show: Boolean) {
+        binding.globalLoader.loaderContainer.visibility = if (show) View.VISIBLE else View.GONE
+    }
 }
