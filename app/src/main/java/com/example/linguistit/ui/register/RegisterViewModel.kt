@@ -1,9 +1,9 @@
 package com.example.linguistit.ui.register
 
+import AuthRepository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.linguistit.data.AuthRepository
 import com.example.linguistit.model.AuthResult
 import com.example.linguistit.model.User
 
@@ -16,12 +16,13 @@ class RegisterViewModel : ViewModel() {
     private val _registerResult = MutableLiveData<AuthResult>()
     val registerResult: LiveData<AuthResult> = _registerResult
 
-    fun completeRegistration(nombre: String, apellido: String, edad: Int) {
+    fun completeRegistration(nombre: String, apellido: String, edad: Int, curso: String) {
         val newUser = User(
             nombre = nombre,
             apellido = apellido,
             email = emailTemp,
-            edad = edad
+            edad = edad,
+            curso = curso
         )
 
         repository.registerUser(newUser, passwordTemp) { result ->

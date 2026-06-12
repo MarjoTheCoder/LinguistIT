@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://tools.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="1dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:strokeWidth="1dp"
+    app:strokeColor="#E0E0E0">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <View
+            android:id="@+id/vStatusIndicator"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="#4CAF50"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvItemTopic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="#212121"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="PHP 8 CRUD Sincronizado"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/vStatusIndicator"
+            app:layout_constraintEnd_toStartOf="@id/tvItemScore" />
+
+        <TextView
+            android:id="@+id/tvItemDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#757575"
+            android:textSize="13sp"
+            tools:text="11/06/2026 19:40"
+            app:layout_constraintTop_toBottomOf="@id/tvItemTopic"
+            app:layout_constraintStart_toStartOf="@id/tvItemTopic"
+            app:layout_constraintEnd_toStartOf="@id/tvItemScore" />
+
+        <TextView
+            android:id="@+id/tvItemScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3F51B5"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="85/100"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

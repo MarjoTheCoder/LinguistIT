@@ -39,12 +39,14 @@ class RegisterInformationFragment : Fragment() {
             val nombre = binding.etName.text.toString()
             val apellido = binding.etSurname.text.toString()
             val edadString = binding.etAge.text.toString()
+            val curso = binding.etCourse.text.toString().trim()
 
             if (validateFields(nombre, apellido, edadString)) {
                 viewModel.completeRegistration(
                     nombre,
                     apellido,
-                    edadString.toInt()
+                    edadString.toInt(),
+                    curso
                 )
             }
         }
@@ -60,7 +62,8 @@ class RegisterInformationFragment : Fragment() {
                     binding.btnFinishRegister.isEnabled = true
                     Toast.makeText(requireContext(), "Registro exitoso", Toast.LENGTH_SHORT).show()
 
-                    findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+                    // CORRECCIÓN: Usar la acción correcta desde este fragmento hacia el Home
+                    findNavController().navigate(R.id.action_registerInformationFragment_to_homeFragment)
                 }
                 is AuthResult.Error -> {
                     binding.btnFinishRegister.isEnabled = true

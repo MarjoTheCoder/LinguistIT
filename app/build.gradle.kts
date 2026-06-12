@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -56,6 +57,8 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
 
     implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+
+    implementation("com.google.code.gson:gson:2.10.1")
 
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-firestore-ktx")

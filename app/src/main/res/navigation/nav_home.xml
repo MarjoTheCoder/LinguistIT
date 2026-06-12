@@ -14,7 +14,7 @@
         android:label="Perfil" />
 
     <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.example.linguistit.ui.home.SettingsFragment"
-        android:label="Ajustes" />
+        android:id="@+id/devlabFragment"
+        android:name="com.example.linguistit.ui.home.devlab.DevLabFragment"
+        android:label="My DevLab" />
 </navigation>

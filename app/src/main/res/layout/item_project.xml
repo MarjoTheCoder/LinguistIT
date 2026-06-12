@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://tools.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:strokeWidth="1dp"
+    app:strokeColor="#E0E0E0">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvProjectName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#212121"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Estructuración de Red FCA Edificio A"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/chipProjectStatus" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipProjectStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="#FFFFFF"
+            app:chipMinHeight="32dp"
+            tools:text="En Desarrollo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvProjectDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#616161"
+            android:textSize="14sp"
+            tools:text="Diseño técnico del cableado estructurado bajo la norma EIA/TIA 568 con un único HC centralizado."
+            app:layout_constraintTop_toBottomOf="@id/tvProjectName" />
+
+        <ProgressBar
+            android:id="@+id/pbProjectProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
+            android:progressTint="#3F51B5"
+            tools:progress="45"
+            app:layout_constraintTop_toBottomOf="@id/tvProjectDesc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvProgressPercent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tvProgressPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#3F51B5"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="45%"
+            app:layout_constraintTop_toTopOf="@id/pbProjectProgress"
+            app:layout_constraintBottom_toBottomOf="@id/pbProjectProgress"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

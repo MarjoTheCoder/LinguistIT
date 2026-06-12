@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/projectsFragment"
-        android:icon="@android:drawable/ic_menu_manage"
+        android:icon="@drawable/ic_projects"
         android:title="Proyectos" />
     <item
         android:id="@+id/profileFragment"
         android:icon="@android:drawable/ic_menu_myplaces"
         android:title="Perfil" />
     <item
-        android:id="@+id/settingsFragment"
-        android:icon="@android:drawable/ic_menu_preferences"
-        android:title="Ajustes" />
+        android:id="@+id/devlabFragment"
+        android:icon="@drawable/ic_dashboard"
+        android:title="My DevLab" />
 </menu>

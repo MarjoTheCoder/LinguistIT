@@ -1,9 +1,9 @@
 package com.example.linguistit.ui.login
 
+import AuthRepository
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.linguistit.data.AuthRepository
 import com.example.linguistit.model.AuthResult
 
 class LoginViewModel : ViewModel() {

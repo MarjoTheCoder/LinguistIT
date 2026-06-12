@@ -15,16 +15,17 @@ class UserRepository {
             return
         }
 
-        db.collection("alumnos").document(userId)
+        db.collection("usuarios").document(userId)
             .get()
             .addOnSuccessListener { document ->
                 if (document != null && document.exists()) {
                     val user = User(
-                        id = 0, // El ID técnico es el UID de Firebase
+                        id = 0,
                         nombre = document.getString("nombre") ?: "",
                         apellido = document.getString("apellido") ?: "",
                         email = document.getString("email") ?: "",
-                        edad = document.getLong("edad")?.toInt() ?: 0
+                        edad = document.getLong("edad")?.toInt() ?: 0,
+                        curso = document.getString("curso") ?: ""
                     )
                     onResult(user)
                 } else {
@@ -42,10 +43,11 @@ class UserRepository {
         val userUpdate = hashMapOf(
             "nombre" to user.nombre,
             "apellido" to user.apellido,
-            "edad" to user.edad
+            "edad" to user.edad,
+            "curso" to user.curso
         )
 
-        db.collection("alumnos").document(userId)
+        db.collection("usuarios").document(userId)
             .update(userUpdate as Map<String, Any>)
             .addOnSuccessListener { onComplete(true) }
             .addOnFailureListener { onComplete(false) }
